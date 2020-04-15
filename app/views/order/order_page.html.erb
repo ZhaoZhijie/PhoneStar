@@ -1,0 +1,93 @@
+<%= include_gon %>
+
+<script src="/javascripts/jquery-3.4.1.min.js"></script>
+<script src="/javascripts/jquery.cookie.js"></script>
+<script src="/javascripts/common.js"></script>
+<script src="/javascripts/main.js"></script>
+<script src="/javascripts/order.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/index.css">
+<link rel="stylesheet" type="text/css" href="/css/main.css">
+<link rel="stylesheet" type="text/css" href="/css/order.css">
+
+<div id="home-header">
+    <a href="/"><span id="logo-text">Phone Star</span></a>
+    <form method="get", action="/good/search_page">
+        <input id="search-words" name="keywords"/>
+        <input id="search-btn" class="button" type="submit" value=""/>
+    </form>
+    <div id="login-reg" class="login-status">
+        <a href="/user/login_page"><span id="login-enter" class="enter-text button">sign in</span></a>
+        <span class="enter-text item-bar">|</span>
+        <a href="/user/register_page"><span id="reg-enter" class="enter-text button">sign up</span></a>
+    </div>
+    <div id="login-user" class="login-status">
+        <a href=""><span id="curuser" class="enter-text button">username</span></a>
+        <span class="enter-text item-bar">|</span>
+        <a href=""><span id="logout" class="enter-text button">Logout</span></a>
+    </div>
+    <a href="/cart/cart_page"><div id="cart-icon"></div></a>
+    <span id="cart-text">cart</span>
+</div>
+
+<div id="order-main">
+    <div id="order-address-box" class="order-box">
+        <h1 class="order-box-title">Mail Adress</h1>
+        <p>
+            <span class="order-text-tag">Detail:</span>
+            <textarea id="order-address-detail" type="textarea" placeholder="Enter your detailed address"></textarea>
+        </p>
+        <p>
+            <span class="order-text-tag" placeholder="Enter your zipcode">Zip Code:</span>
+            <input id="order-zip-code" class="order-address-common" type="text"/>
+        </p>
+        <p>
+            <span class="order-text-tag">Email:</span>
+            <input id="order-email" class="order-address-common" type="text" placeholder="Enter your email"/>
+        </p>
+    </div>
+    <div id="order-goods-box" class="order-box">
+        <div>物品1</div>
+        <div>物品2</div>
+    </div>
+    <div id="order-summary-box" class="order-box">
+        <p>订单总结</p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

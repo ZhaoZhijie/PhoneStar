@@ -1,0 +1,66 @@
+
+<script src="/javascripts/jquery-3.4.1.min.js"></script>
+<script src="/javascripts/jquery.cookie.js"></script>
+<script src="/javascripts/main.js"></script>
+<script src="/javascripts/register.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/index.css">
+<link rel="stylesheet" type="text/css" href="/css/main.css">
+<link rel="stylesheet" type="text/css" href="/css/register.css">
+
+<div id="home-header">
+    <a href="/"><span id="logo-text">Phone Star</span></a>
+    <form method="get", action="/good/search_page">
+        <input id="search-words" name="keywords"/>
+        <input id="search-btn" class="button" type="submit" value=""/>
+    </form>
+    <div id="login-reg" class="login-status">
+        <a href="/user/login_page"><span id="login-enter" class="enter-text button">sign in</span></a>
+        <span class="enter-text item-bar">|</span>
+        <a href="/user/register_page"><span id="reg-enter" class="enter-text button">sign up</span></a>
+    </div>
+    <div id="login-user" class="login-status">
+        <a href=""><span id="curuser" class="enter-text button">username</span></a>
+        <span class="enter-text item-bar">|</span>
+        <a href=""><span id="logout" class="enter-text button">Logout</span></a>
+    </div>
+    <a href="/cart/cart_page"><div id="cart-icon"></div></a>
+    <span id="cart-text">cart</span>
+</div>
+
+<div id="register-main">
+    <form id="register-form">
+        <h1>Sign Up</h1>
+        <p class="reg-info">Username:</p>
+        <input class="reg-text" type="text", id="username" name="username" placeholder="Enter your username"/>
+        <p class="reg-info">Password:</p>
+        <input class="reg-text" type="text", id="password" name="password" placeholder="Enter your password"/>
+        <p class="reg-info">Email:</p>
+        <input class="reg-text" type="text", id="email" name="email" placeholder="Enter your email address"/>
+
+        <input id="reg-submit" type="button" class="button" value="submit"/>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
