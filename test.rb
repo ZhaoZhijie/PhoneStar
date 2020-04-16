@@ -1,27 +1,35 @@
 require 'pg'
+require 'time'
 
-conn = PG.connect( :dbname => 'goods_db', :host => 'localhost', :port => 5432,:user => 'postgres' , :password => '17951' )
+def testpg
+    conn = PG.connect( :dbname => 'goods_db', :host => 'localhost', :port => 5432,:user => 'postgres' , :password => '17951' )
 
-res = conn.query("SELECT * FROM goods LIMIT 10;")
-
-=begin
-res.values.collect do |row|
-    puts row.collect {|col| "%-15s" % [col] }.join( '' )
-    result = row.to_json
-    puts "result is #{result}"
+    res = conn.query("SELECT * FROM goods LIMIT 10;")
+    
+    res.values.collect do |row|
+        puts row.collect {|col| "%-15s" % [col] }.join( '' )
+        result = row.to_json
+        puts "result is #{result}"
+    end
+    record = []
+    
+    res.each do |e|
+        obj = e.to_json
+        record.push obj
+    end
+    
+    puts record.to_json
+    
+    res.clear
+    conn.close
 end
-=end 
-record = []
 
-res.each do |e|
-    obj = e.to_json
-    record.push obj
-end
 
-puts record.to_json
+time = Time.now
+str = Time.at time
+puts str
 
-res.clear
-conn.close
+
 
 
 

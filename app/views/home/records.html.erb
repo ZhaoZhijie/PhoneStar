@@ -1,11 +1,13 @@
+<%= include_gon %>
 
 <script src="/javascripts/jquery-3.4.1.min.js"></script>
 <script src="/javascripts/jquery.cookie.js"></script>
+<script src="/javascripts/common.js"></script>
 <script src="/javascripts/main.js"></script>
-<script src="/javascripts/login.js"></script>
+<script src="/javascripts/records.js"></script>
 <link rel="stylesheet" type="text/css" href="/css/index.css">
 <link rel="stylesheet" type="text/css" href="/css/main.css">
-<link rel="stylesheet" type="text/css" href="/css/login.css">
+<link rel="stylesheet" type="text/css" href="/css/records.css">
 
 <div id="home-header">
     <a href="/"><span id="logo-text">Phone Star</span></a>
@@ -27,16 +29,29 @@
     <span id="cart-text">cart</span>
 </div>
 
-<div id="login-main">
-    <form id="login-form">
-        <h1>Login</h1>
-        <p class="log-info">Username:</p>
-        <input class="log-text" type="text", id="username" name="username" placeholder="Enter your username"/>
-        <p class="log-info">Password:</p>
-        <input class="log-text" type="text", id="password" name="password" placeholder="Enter your password"/>
-
-        <input id="login-submit" type="button" class="button" value="submit"/>
-    </form>
+<div id="records-main" class="main-box">
+    <div id="records-table">
+        <p id="records-header"><span class="col-ip">ip</span><span class="col-time">time</span><span class="col-path">path</span></p>
+        <div id="records-list">
+            <!--
+            <p class="records-row">
+                <span class="col-ip">127.127.127.127</span>
+                <span class="col-time">2020-04-16 11:18:51</span>
+                <span class="col-path">/good/detail</span>
+            </p>
+            <p class="records-row">
+                <span class="col-ip">127.127.127.127</span>
+                <span class="col-time">2020-04-16 11:18:51</span>
+                <span class="col-path">/good/detail</span>
+            </p>
+            <p class="records-row">
+                <span class="col-ip">127.127.127.127</span>
+                <span class="col-time">2020-04-16 11:18:51</span>
+                <span class="col-path">/good/detail</span>
+            </p>
+            -->
+        </div>
+    </div>
 </div>
 
 

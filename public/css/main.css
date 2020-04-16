@@ -92,6 +92,11 @@
     font-size:12px;
 }
 
+.main-box{
+    width:900px;
+    margin:auto;
+    border:1px rgb(248,248,248) solid;
+}
 
 
 
