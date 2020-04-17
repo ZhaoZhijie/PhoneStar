@@ -36,3 +36,6 @@
 
 #Ignore db
 /db
+
+#Ignore log
+/out.log

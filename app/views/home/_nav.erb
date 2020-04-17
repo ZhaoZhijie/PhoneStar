@@ -1,14 +1,3 @@
-<%= include_gon %>
-
-<script src="/javascripts/jquery-3.4.1.min.js"></script>
-<script src="/javascripts/jquery.cookie.js"></script>
-<script src="/javascripts/main.js"></script>
-<script src="/javascripts/search_page.js"></script>
-<link rel="stylesheet" type="text/css" href="/css/index.css">
-<link rel="stylesheet" type="text/css" href="/css/main.css">
-<link rel="stylesheet" type="text/css" href="/css/search.css">
-
-
 
 <div id="home-header">
     <a href="/"><span id="logo-text">Phone Star</span></a>
@@ -24,11 +13,10 @@
     <div id="login-user" class="login-status">
         <a href=""><span id="curuser" class="enter-text button">username</span></a>
         <span class="enter-text item-bar">|</span>
-        <a href=""><span id="logout" class="enter-text button">Logout</span></a>
+        <span id="logout" class="enter-text button">Logout</span>
     </div>
-    <div id="cart-icon"></div>
+    <div id="cart-icon" class="button"></div>
     <span id="cart-text">cart</span>
 </div>
 
-<%= yield %>
 
