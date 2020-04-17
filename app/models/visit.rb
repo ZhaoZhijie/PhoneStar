@@ -1,0 +1,14 @@
+class Visit < ApplicationRecord
+    
+end
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+class Ordergood < ApplicationRecord
+    
+end
+
+
+
+
+
+
+

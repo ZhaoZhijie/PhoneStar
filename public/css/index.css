@@ -27,3 +27,7 @@ a:hover{
     text-decoration: none; 
     color: black;
 }
+
+.pink-color{
+    color:rgb(255,68,0);
+}

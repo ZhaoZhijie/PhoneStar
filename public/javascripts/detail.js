@@ -40,7 +40,10 @@ $(function(){
         console.log("add to local cart"+JSON.stringify(cart));
     })
 
-
+    $("#buy-now").click(function(){
+        var goods = [{good_id:gooddata.good.id, num:quantity}];
+        orderGoods(goods);
+    })
 
 
 

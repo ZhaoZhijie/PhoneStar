@@ -17,12 +17,11 @@
 }
 
 #order-address-box{
-    height:400px;
+    min-height:400px;
     margin-top:50px;
     margin-bottom:50px;
     background: rgb(255,255,255);
-    padding-top:45px;
-    padding-left:45px;
+    padding:45px 0px 45px 45px;
 }
 .order-text-tag{
     display:block;
@@ -31,6 +30,8 @@
     font-size:13px;
     line-height:30px;
 }
+
+
 
 #order-address-detail{
     width:370px;
@@ -50,20 +51,16 @@
     color:rgb(70,70,70);
 }
 
-#order-goods-box{
-    min-height:500px;
-    border:1px green solid;
-    margin-bottom:50px;
-    background: rgb(255,255,255);
+.plain-summary{
+    padding-left:350px;   
 }
 
-#order-summary-box{
-    height:100px;
-    border:1px yellow solid;
-    margin-bottom:50px;
-    background: rgb(255,255,255);
+/*
+hidden tick box
+*/
+.col-tickbox{
+    visibility:hidden;
 }
-
 
 
 

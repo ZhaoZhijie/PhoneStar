@@ -4,7 +4,7 @@ class UserController < ApplicationController
     def detail_data
         good_id = params[:good_id]
         puts "客户端商品id是#{good_id}"
-        record = Goods.find(good_id)
+        record = Good.find(good_id)
         good_properties = get_good_config(good_id)
         data = {"good"=>record, "properties"=>good_properties}
         respond_to do |format|
@@ -18,14 +18,14 @@ class UserController < ApplicationController
         username = params[:username]
         #check if username is exists
         res = {:status=>0, :msg=>"reigster sucessfully!"}
-        if Users.where("username=?",username).length != 0
+        if User.where("username=?",username).length != 0
             res[:status] = 1
             res[:msg] = "Username is already registered!"
             puts "用户名已经存在"
         else
             password = params[:password]
             email = params[:email]
-            newuser = Users.new
+            newuser = User.new
             newuser.username = username
             newuser.password = Digest::MD5.hexdigest(password)
             if newuser.save
@@ -46,7 +46,7 @@ class UserController < ApplicationController
         username = params[:username]
         password = params[:password]
         password = Digest::MD5.hexdigest(password)
-        users = Users.where(username:username, password:password)
+        users = User.where(username:username, password:password)
         if users.length == 0
             res[:status] = 1
             res[:msg] = "Username or password is incorrect!"
@@ -60,8 +60,8 @@ class UserController < ApplicationController
 
     def logout
         session.delete(:user_id)
-        session.delete(:user_id)
         session.delete(:username)
+        puts "当前退出登录后登录id:#{session[:user_id]}"
         res = {:status=>0}
         respond_to do |format|
             format.json {render json:res.to_json}
@@ -71,7 +71,7 @@ class UserController < ApplicationController
     private
         #获取商品的属性配置信息
         def get_good_config(id)
-            records = Properties.select("attr_name, attr_val").where("good_id=?", id)
+            records = Property.select("attr_name, attr_val").where("good_id=?", id)
             return records
         end
 

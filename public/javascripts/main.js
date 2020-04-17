@@ -2,9 +2,8 @@
 
 $(function(){
     check_login();
-
     $("#curuser").click(function(){
-        alert("进入个人中心")
+        alert("进入个人中心");
     })
 
     $("#logout").click(function(){
@@ -18,6 +17,10 @@ $(function(){
                 alert("Logout Error!")
             }
         })
+    })
+
+    $("#cart-icon").click(function(){
+        toCart();
     })
 
     //check if user is login

@@ -32,3 +32,6 @@
 
 #Ignore images
 /public/images
+
+#Ignore db
+/db

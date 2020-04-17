@@ -4,9 +4,11 @@
 <script src="/javascripts/jquery.cookie.js"></script>
 <script src="/javascripts/common.js"></script>
 <script src="/javascripts/main.js"></script>
+<script src="/javascripts/glist.js"></script>
 <script src="/javascripts/cart.js"></script>
 <link rel="stylesheet" type="text/css" href="/css/index.css">
 <link rel="stylesheet" type="text/css" href="/css/main.css">
+<link rel="stylesheet" type="text/css" href="/css/glist.css">
 <link rel="stylesheet" type="text/css" href="/css/cart.css">
 
 <div id="home-header">
@@ -23,27 +25,27 @@
     <div id="login-user" class="login-status">
         <a href=""><span id="curuser" class="enter-text button">username</span></a>
         <span class="enter-text item-bar">|</span>
-        <a href=""><span id="logout" class="enter-text button">Logout</span></a>
+        <span id="logout" class="enter-text button">Logout</span>
     </div>
-    <a href="/cart/cart_page"><div id="cart-icon"></div></a>
+    <div id="cart-icon" class="button"></div>
     <span id="cart-text">cart</span>
 </div>
 
-<div id="cart-main">
-    <div id="goods-box">
-        <div id="table-header">
+<div id="cart-main" class="main-box">
+    <div class="goods-box">
+        <div class="table-header">
             <span class="list-header header-product">product</span>
             <span class="list-header header-col-price">price</span>
             <span class="list-header header-col-num">num</span>
             <span class="list-header header-col-total">total</span>
         </div>
-        <div id="empty-cart-info">
-            <img src="/images/icons/empty-cart.png" id="empty-cart-icon"/>
-            <p id="empty-car-text">Your cart is empty, enjoy your shopping now!</p>
+        <div class="empty-goods-info">
+            <img src="/images/icons/empty-cart.png" class="empty-goods-icon"/>
+            <p class="empty-goods-text">Your cart is empty, enjoy your shopping now!</p>
         </div>
-        <div id="goods-list">
+        <div class="goods-list">
             <!--
-            <p class="cart-good-item" gid=$gid>
+            <p class="list-good-item" gid=$gid>
                 <span class="list-good col-tickbox"><label class="good-tick" tick="no"></label></span>
                 <img class="list-good col-cover"/>
                 <span class="list-good col-product">iphonefsdfsdf dsfdsfsdfsdfffsdf</span>
@@ -53,18 +55,18 @@
             </p>
             -->
         </div>
-        <div id="summary">
+        <div class="goods-summary">
             <span class="summary-unit">
-                <span id="tick-all" class="good-tick" tick="no" gid="all"></span>
+                <span class="good-tick tick-all goods-tick-all" tick="no" gid="all"></span>
             </span>
-            <span id="cart-all-text" class="summary-unit">select all</span>
-            <span id="cart-delete-text" class="summary-unit button">delete</span>
-            <span id="cart-counts-text" class="summary-unit">counts:</span>
-            <span id="cart-counts-val" class="summary-unit pink-color">0</span>
-            <span id="cart-fee-text" class="summary-unit">total money:</span>
-            <span id="cart-fee-symbol" class="summary-unit pink-color">¥</span>
-            <span id="cart-fee-val" class="summary-unit pink-color">0</span>
-            <span id="cart-commit" class="summary-unit button">commit</span>
+            <span class="goods-all-text summary-unit">select all</span>
+            <span class="goods-delete-text summary-unit button">delete</span>
+            <span class="goods-counts-text summary-unit">counts:</span>
+            <span class="goods-counts-val summary-unit pink-color">0</span>
+            <span class="goods-fee-text summary-unit">total money:</span>
+            <span class="goods-fee-symbol summary-unit pink-color">¥</span>
+            <span class="goods-fee-val summary-unit pink-color">0</span>
+            <span class="goods-commit summary-unit button">commit</span>
         </div>
     </div>
 </div>

@@ -1,3 +1,0 @@
-class Carts < ApplicationRecord
-    
-end
