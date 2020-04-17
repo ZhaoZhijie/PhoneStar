@@ -53,6 +53,7 @@ function showGoods(goods, goods_basic){
     }
 }
 
+//display empty cart
 function showGoodsEmpty(){
     $(".empty-goods-info").css("display", "block");
 }
