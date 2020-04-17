@@ -1,14 +1,2 @@
 class Visit < ApplicationRecord
-    
 end
-
-
-
-
-
-
-
-
-
-
-
