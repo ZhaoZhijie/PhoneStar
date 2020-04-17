@@ -77,7 +77,7 @@ class UserController < ApplicationController
 
         def log_in(user)
             puts "处理用户登录信息"
-            session[:user_id] = user.id
+            session[:user_id] = user.user_id
             cookies[:user_id] = user.user_id
             cookies[:username] = user.username
         end  
