@@ -31,7 +31,8 @@
 /config/master.key
 
 #Ignore images
-/public/images
+/public/images/desc/*
+/public/images/goods/*
 
 #Ignore db
 /db
