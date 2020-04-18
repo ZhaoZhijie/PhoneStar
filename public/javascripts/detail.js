@@ -30,10 +30,8 @@ $(function(){
         var num = quantity;
         //cookie has username means that user is logged in
         if($.cookie("username")){
-            alert("add good to server cart")
             addServerCart(good_id, num);
         } else {
-            alert("add good to local cart")
             addCookieCart(good_id, num);
         }
         cart = getCookieCart();

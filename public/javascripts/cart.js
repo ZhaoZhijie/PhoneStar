@@ -11,6 +11,10 @@ $(function(){
     //redict to order page
     $(".goods-commit").click(function(){
         var selectedgoods = getSelectedGoods(goods, selected);
+        if(selectedgoods.length == 0){
+            alert("You must select at least one product to order!");
+            return;
+        }
         orderGoods(selectedgoods);
     });
 

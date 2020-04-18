@@ -6,7 +6,7 @@ body{
 #good-main{
     margin:auto;
     width:900px;
-    height:800px;
+    min-height:200px;
 }
 
 #good-title{
@@ -16,8 +16,6 @@ body{
     color:rgb(155, 197, 236);
     margin-left:50px;
 }
-
-
 
 #good-img{
     width:400px;
@@ -33,7 +31,7 @@ body{
     padding-top:20px;
 }
 
-#good-name2{
+#good-name{
     width:500px;
     height:90px;
     font-size:15px;
@@ -46,7 +44,7 @@ body{
     width:500px;
     height:60px;
     line-height:60px;
-    color:rgb(54, 54, 32);
+    color:var(--pink-color);
     font-size:18px;
     /*background: rgb(11, 187, 105);*/
     margin-top:30px;
@@ -105,14 +103,23 @@ body{
     background:rgb(51,102,204)
 }
 
+.header-bar{
+    height:1px;
+    margin:auto;
+    margin-top:0px;
+    border:1px var(--theme-color) solid;
+}
+
 #good-detail-wrap{
     margin-top:30px;
+    min-height: 800px;
+    padding-bottom:1px;
 }
 
 #detail-tabs{
     height:50px;
-    background:rgb(247,247,247);
-    border:1px rgb(238,238,238) solid;
+    background-color:var(--theme-color);
+    border-bottom: 1px var(--theme-color) solid;
 }
 
 .tabs{
@@ -122,8 +129,7 @@ body{
     display:block;
     float:left;
     text-align:center;
-    background:rgb(247,247,247);
-    color:rgb(102,102,102);
+    color:rgb(255,255,255);
     cursor:pointer;
 }
 

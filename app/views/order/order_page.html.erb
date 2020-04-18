@@ -5,26 +5,6 @@
 
 <%= render "/home/nav"%>
 
-<div id="home-header">
-    <a href="/"><span id="logo-text">Phone Star</span></a>
-    <form method="get", action="/good/search_page">
-        <input id="search-words" name="keywords"/>
-        <input id="search-btn" class="button" type="submit" value=""/>
-    </form>
-    <div id="login-reg" class="login-status">
-        <a href="/user/login_page"><span id="login-enter" class="enter-text button">sign in</span></a>
-        <span class="enter-text item-bar">|</span>
-        <a href="/user/register_page"><span id="reg-enter" class="enter-text button">sign up</span></a>
-    </div>
-    <div id="login-user" class="login-status">
-        <a href=""><span id="curuser" class="enter-text button">username</span></a>
-        <span class="enter-text item-bar">|</span>
-        <span id="logout" class="enter-text button">Logout</span>
-    </div>
-    <div id="cart-icon" class="button"></div>
-    <span id="cart-text">cart</span>
-</div>
-
 <div id="order-main">
     <div id="order-address-box" class="order-box">
         <h1 class="order-box-title">Mail Adress</h1>
@@ -76,7 +56,7 @@
     </div>
 </div>
 
-
+<%= render "/home/footer"%>
 
 
 
