@@ -79,9 +79,8 @@ end
 
 require 'net/smtp'
 
-lastname = "Zilong"
-firstname = "Zhao"
-order_id = "352145212541125"
-money = 8542
-email = "179527026@qq.com"
-send_order_email(lastname, firstname, order_id, money, email)
+reg = / /
+
+if reg =~ " "
+    puts "yes"
+end

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'user/logout'
   get 'cart/add2cart'
   get 'cart/cart_page'
+  post 'cart/delete_goods'
   get 'order/order_page'
   post 'order/check'
   get "home/main"
