@@ -12,8 +12,8 @@ $(function(){
     var checklist = [
         {name:"lastname", func:check_name, identify:"#order-lastname", err_identify:"#lastname-error"},
         {name:"firstname", func:check_name, identify:"#order-firstname", err_identify:"#firstname-error"},
-        {name:"province", func:check_name, identify:"#order-province", err_identify:"#province-error"},
-        {name:"city", func:check_name, identify:"#order-city", err_identify:"#city-error"},
+        {name:"province", func:check_province, identify:"#order-province", err_identify:"#province-error"},
+        {name:"city", func:check_city, identify:"#order-city", err_identify:"#city-error"},
         {name:"address", func:check_address, identify:"#order-address", err_identify:"#address-error"},
         {name:"zipcode", func:check_zipcode, identify:"#order-zipcode", err_identify:"#zipcode-error"},
         {name:"email", func:check_email, identify:"#order-email", err_identify:"#address-email-error"}
