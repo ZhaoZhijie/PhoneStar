@@ -2,10 +2,13 @@ class UserController < ApplicationController
     skip_before_action :verify_authenticity_token
 
     def center
-        @page = params[:page] || "basic"
-        @act = params[:act] || "show"
+        user_id = get_user_id()
+        gon.page = @page = params[:page] || "basic"
+        gon.act = @act = params[:act] || "show"
         if @page == "basic"
-            gon.basic = Userbasic.where(user_id:get_user_id())[0]
+            gon.basic = Userbasic.where(user_id:user_id)[0]
+        elsif @page == "orders"
+            gon.orders = Order.where(user_id:user_id)
         end
         puts "page:#{@page}, act:#{@act}, basic:#{gon.basic.to_json}"
     end
@@ -41,6 +44,26 @@ class UserController < ApplicationController
                     :zipcode=>params[:zipcode],
                     :email=>params[:email]
                 )
+            end 
+        end
+        respond_to do |format|
+            format.json {render json:res.to_json}
+        end
+    end
+
+    def change_pwd
+        res = {:status=>0, :msg=>"change password successfully!"}
+        if !log_in?()
+            res[:status] = 1
+            res[:msg] = "invalid operation!"
+        else
+            password = params[:password]
+            checkres = check_input("password", password, nil, 12, 4)
+            if checkres != ""
+                res[:status] = 2
+                res[:msg] = checkres
+            elsif
+                User.update(get_user_id(), :password=>Digest::MD5.hexdigest(password))
             end 
         end
         respond_to do |format|

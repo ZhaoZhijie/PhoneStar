@@ -103,9 +103,91 @@
     padding-left:8px;
 }
 
+#center-order-list{
+    width:560px;
+    margin:auto;
+    margin-top:30px;
+    margin-bottom:30px;
+    min-height:10px;
+}
+.single-order{
+    padding:15px 10px;
+    margin-bottom: 20px;
+    background: rgb(246,246,246);
+    border-radius: 10px;
+    position: relative;
+}
+.order-action-icon{
+    width:20px;
+    height:20px;
+    position: absolute;
+    font-size:13px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.order-action-detail{
+    background: url("/images/icons/detail.png") no-repeat;
+    background-size: 18px 18px;
+    right:16px;
+    top:15px;
+}
+.order-action-delete{
+    background: url("/images/icons/delete4.png") no-repeat;
+    background-size: 18px 18px;
+    right:16px;
+    bottom:20px;
+}
+.order-header{
+    border-bottom: 1px var(--theme-color) solid;
+}
+.order-header p{
+    display:inline-block;
+    font-size:14px;
+}
+.order-header-order{
+    margin-left:50px;
+}
+.order-header-total{
+    margin-left:50px;
+}
+.order-header-tag{
+    margin-right:5px;
+}
+.order-items{
+    padding-top:10px;
+}
+.order-items p{
+    height:20px;
+    line-height:20px;
+    font-size:14px;
+}
+.order-item-tag{
+    display:inline-block;
+    width:65px;
+    color:black;
+}
+.order-item-val{
+    color:rgb(100,100,100);
+}
 
-
-
+#center-password{
+    padding:30px 40px;
+}
+#commit-password{
+    width:140px;
+    height:40px;
+    margin-top:30px;
+    background: var(--theme-color);
+    border:none;
+    color:white;
+    font-size:14px;
+    cursor: pointer;
+    font-weight: bold;
+}
+#commit-password:hover{
+    background:rgb(66,53,246);
+    color:var(--pink-color);
+}
 
 
 

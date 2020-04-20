@@ -4,17 +4,19 @@ $(function(){
     var goods_basic = gon.goods_basic;//basic info of goods in cart
     var basic = gon.basic;
     console.log("current goods is ",JSON.stringify(goods));
-
+    console.log("current basic is", JSON.stringify(basic))
     showGoods(goods, goods_basic);
     showGoodsSummay(goods, goods_basic);
     initUserBasicInput(basic)
 
     var checklist = [
-        {func:check_name, identify:"#order-lastname", err_identify:"#lastname-error"},
-        {func:check_name, identify:"#order-firstname", err_identify:"#firstname-error"},
-        {func:check_address, identify:"#order-address", err_identify:"#address-error"},
-        {func:check_zipcode, identify:"#order-zipcode", err_identify:"#zipcode-error"},
-        {func:check_email, identify:"#order-email", err_identify:"#address-email-error"}
+        {name:"lastname", func:check_name, identify:"#order-lastname", err_identify:"#lastname-error"},
+        {name:"firstname", func:check_name, identify:"#order-firstname", err_identify:"#firstname-error"},
+        {name:"province", func:check_name, identify:"#order-province", err_identify:"#province-error"},
+        {name:"city", func:check_name, identify:"#order-city", err_identify:"#city-error"},
+        {name:"address", func:check_address, identify:"#order-address", err_identify:"#address-error"},
+        {name:"zipcode", func:check_zipcode, identify:"#order-zipcode", err_identify:"#zipcode-error"},
+        {name:"email", func:check_email, identify:"#order-email", err_identify:"#address-email-error"}
     ];
 
     setFormListener(checklist);
@@ -26,12 +28,8 @@ $(function(){
             alert(checkres);
             return;
         }
-        var lastname = $("#order-lastname").val();
-        var firstname = $("#order-firstname").val();
-        var address = $("#order-address").val();
-        var zipcode = $("#order-zipcode").val();
-        var email = $("#order-email").val();
-        var params = {goods:goods, address: address, zipcode:zipcode, email:email, firstname:firstname, lastname:lastname};
+        var params = form_pack(checklist);
+        params.goods = goods;
 
         $.post("/order/check", params, function(data, status){
             if(status != 'success'){
