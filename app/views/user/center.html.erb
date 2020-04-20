@@ -1,0 +1,56 @@
+
+<%= render "/home/nav"%>
+
+<script src="/javascripts/center.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/center.css">
+
+<div id="user-center-main" class="main-box">
+    <div class="center-tags">
+        <a href="/user/center"><div class="center-tag">basic</div></a>
+        <a href="javascript:toCart();"><div class="center-tag">cart</div></a>
+        <a href="/user/center?page=orders"><div class="center-tag">orders</div></a>
+        <a href="/user/center?page=reviews"><div class="center-tag">reviews</div></a>
+        <a href="/user/center?page=password"><div class="center-tag">password</div></a>
+    </div>
+    <% if @page=="basic"%>
+        <% if @act=="edit"%>
+            <%= render "/user/basic_edit"%>
+        <% else%>
+            <%= render "/user/basic"%>
+        <% end%>
+    <% elsif @page=="orders"%>
+        <%= render "/user/orders"%>
+    <% elsif @page=="reviews"%>
+        <%= render "/user/reviews"%>
+    <% elsif @page=="password"%>
+        <%= render "/user/password"%>
+    <% end%>
+
+
+</div>
+
+<%= render "/home/footer"%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

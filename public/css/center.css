@@ -1,0 +1,122 @@
+#user-center-main{
+    min-height:400px;
+    border:none;
+    /* background: white; */
+    margin-top:30px;
+}
+
+.center-tags{
+    width:170px;
+    min-height:400px;
+    float:left;
+}
+
+.center-tag{
+    width:170px;
+    height:40px;
+    line-height:40px;
+    margin:auto;
+    margin-bottom:1px;
+    text-align: center;
+    cursor:pointer;
+    background: var(--theme-color);
+    color:white;
+}
+.center-tag:hover{
+    background: rgb(47, 32, 247);
+    opacity: 0.9;
+    color:var(--pink-color);
+}
+
+/* remain 730px on the right part including margin */
+
+.center-content-box{
+    width:700px;
+    min-height:400px;
+    margin-left:30px;
+    border:1px rgb(210,210,210) solid;
+    float:left;
+    background:white;
+}
+.center-basic-box{
+    padding:30px 30px;
+}
+#center-basic{
+    font-size:14px;
+    line-height:25px;
+}
+.content-action-wrap{
+    margin-bottom:20px;
+    height:30px;
+    line-height:30px;
+    font-size:14px;
+}
+.content-action{
+    display:block;
+    height:30px;
+    text-decoration: underline;
+    cursor: pointer;
+    float:left;
+}
+.action-icon{
+    display:block;
+    width:19px;
+    height:19px;
+    background-repeat: no-repeat;
+    float:left;
+    cursor: pointer;
+}
+#edit-icon{
+    background: url("/images/icons/edit.png");
+    background-size:19px 19px;
+    margin-top:4px;
+    margin-left:3px;
+}
+#save-icon{
+    background: url("/images/icons/save.png");
+    background-size:19px 19px;
+    margin-top:4px;
+    margin-left:3px;
+}
+.content-edit:hover{
+    color:var(--pink-color);
+}
+.basic-tag{
+    display:inline-block;
+    margin-right:15px;
+    width:100px;
+    color:rgb(20,20,20);
+}
+.basic-value{
+    color:rgb(100,100,100);
+}
+
+.edit-block p{
+    height:40px;
+    line-height:40px;
+    font-size:14px;
+    color:rgb(100,100,100);
+}
+.edit-block input{
+    width:370px;
+    height:40px;
+    padding-left:8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

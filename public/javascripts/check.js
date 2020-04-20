@@ -38,6 +38,14 @@ function check_email(str){
     return "";
 }
 
+function check_province(str){
+    return "";
+}
+
+function check_city(str){
+    return "";
+}
+
 /**
  * check user input by reg and length
  * @param {*} str user input str
@@ -88,6 +96,14 @@ function check_form(checklist){
     return msg;
 }
 
+function form_pack(checklist){
+    var data = {};
+    for(var i = 0; i < checklist.length; i++){
+        var cfg = checklist[i];
+        data[cfg.name] = $(cfg.identify).val()
+    }
+    return data;
+}
 
 
 

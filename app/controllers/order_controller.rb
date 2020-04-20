@@ -8,6 +8,11 @@ class OrderController < ApplicationController
         gon.goods = goods
         ids = goods_id(goods)
         gon.goods_basic = goods_basic(ids)
+        if log_in?
+            gon.basic = Userbasic.where(user_id:get_user_id())[0]
+        else
+            gon.basic = nil
+        end
     end
 
     def check

@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get 'user/login_page'
   post 'user/login'
   get 'user/logout'
+  get 'user/center'
+  post "user/update_basic"
   get 'cart/add2cart'
   get 'cart/cart_page'
   post 'cart/delete_goods'
